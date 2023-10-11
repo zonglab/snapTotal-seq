@@ -26,6 +26,9 @@ rm ${sample}_adapter_trimmed_1.fq.gz
 
 # mapping read1
 STAR --runThreadN ['Threads num'] --runMode alignReads --genomeDir ['Your directory to STAR index folder'] --outFilterMismatchNmax 5 --readFilesCommand zcat --readFilesIn ${sample}_UMItrimmed_1.fq.gz --outSAMtype BAM Unsorted
+####
+# Use ${sample}_1.fq.gz for mapping if no trimming was performed
+####
 
 samtools sort Aligned.out.bam -o  Aligned.r1.bam
 rm -rf Aligned.out.bam
