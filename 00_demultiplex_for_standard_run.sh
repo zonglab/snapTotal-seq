@@ -2,7 +2,7 @@
 
 datadir='[Your directory]'
 
-lib_id='[Library ID]' # each library is first demultiplexed based on i5 index using standard Illumina demultiplex pipeline
+lib_id='[Sub-library ID]' # each sub-library is first demultiplexed based on i5 index using standard Illumina demultiplex pipeline
 
 cd ${datadir}
 
